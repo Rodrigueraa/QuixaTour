@@ -1,0 +1,14 @@
+main {
+    flex-direction: column;
+}
+
+b {
+    font-size: 30px;
+}
+
+.four-zero-four {
+    font-size: 200px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: antiquewhite;
+}

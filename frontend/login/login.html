@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../src/nav/add_navbar.js"></script>
+    <link rel="stylesheet" href="../src/css/basic-page.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Quixadá tour - Login</title>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <header id="navbar"></header>
+
+    <!-- Conteúdo Principal Aqui -->
+    <main>
+        <section class="entrar">
+            <div class="img-container">
+                <img src="../src/img/logo2.png" alt="">
+            </div>
+            <form class="container" id="form">
+                <div class="usuario">
+                    <label for="usuario">Usuario ou E-mail</label>
+                    <input id="usuario" type="email" placeholder="E-mail" required>
+                </div>
+
+                <div class="senha">
+                    <label for="senha">Senha</label>
+                    <input id="senha" type="password" placeholder="Senha" required>
+                    <a href="#" title="Recupere sua senha caso tenha esquecido">Esqueceu a senha?</a>
+                </div>
+
+                <div class="login">
+                    <button>Login</button>
+                </div>
+            </form>
+            <p class="registrar">
+                Novo no Quixadá Tour?
+                <a href="../registrar/registrar.html" title="Crie sua conta no sistema"> Registre-se →</a>
+            </p>
+        </section>
+    </main>
+    <!-- Loading Screen -->
+    <div id="loader-container"></div>
+    <script src="../src/js/loading.js"></script>
+    <script src="script.js"></script>
+    <script src="../src/js/particles.js"></script>
+</body>
+</html>

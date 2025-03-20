@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avaliacaos",
+  "info": {
+    "singularName": "avaliacao",
+    "pluralName": "avaliacaos",
+    "displayName": "Avaliacao",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "descricao": {
+      "type": "text"
+    },
+    "avaliando_atracao": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::atracao.atracao",
+      "inversedBy": "avaliacaos"
+    },
+    "avaliado_por": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::usuario.usuario",
+      "inversedBy": "reviews"
+    },
+    "avaliando_usuario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::usuario.usuario",
+      "inversedBy": "avaliacoes"
+    },
+    "nota": {
+      "type": "integer",
+      "max": 5,
+      "min": 0
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "singularName": "usuario",
+    "pluralName": "usuarios",
+    "displayName": "Public",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "default": "Nome Sobrenome"
+    },
+    "bio": {
+      "type": "text",
+      "default": "Your bio here"
+    },
+    "nota": {
+      "type": "integer",
+      "max": 5,
+      "min": 0,
+      "default": 5
+    },
+    "foto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "usuario"
+    },
+    "sexo": {
+      "type": "string",
+      "required": true
+    },
+    "nascimento": {
+      "type": "date",
+      "default": "2025-02-10"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::avaliacao.avaliacao",
+      "mappedBy": "avaliado_por"
+    },
+    "avaliacoes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::avaliacao.avaliacao",
+      "mappedBy": "avaliando_usuario"
+    },
+    "nome_completo": {
+      "type": "string",
+      "required": true,
+      "default": "Seu Nome Completo Aqui"
+    },
+    "atracaos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::atracao.atracao",
+      "mappedBy": "publics"
+    },
+    "contato": {
+      "type": "string"
+    },
+    "parceria": {
+      "type": "integer",
+      "max": 2
+    },
+    "veiculo": {
+      "type": "boolean"
+    }
+  }
+}

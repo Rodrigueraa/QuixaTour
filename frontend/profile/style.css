@@ -1,0 +1,409 @@
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../src/fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../src/fonts/poppins/Poppins-Light.ttf')
+}
+
+html, body {
+    overflow: hidden;
+}
+
+
+main {
+    width: 90%;
+    min-width: 1100px;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.salvar-container {
+    font-family: 'Poppins Bold';
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 1%;
+    transform: translateX(100%);
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.5s ease;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.3);
+}
+
+.salvar-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.salvar-container button {
+    background-color: antiquewhite;
+    border: none;
+    min-width: 90px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    border: rgba(100, 100, 100, 0.6) 2px solid;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Mantém no fundo */
+    background: var(--page-bg-color); /* Ajuste conforme necessário */
+}
+
+main i {
+    padding: 3px;
+}
+
+
+img {
+    max-height: none;
+    max-width: none;
+}
+
+
+#sexo {
+    font-family: 'Poppins Regular';
+}
+
+main .stars {
+    white-space: nowrap;
+}
+
+.border {
+    width: 70%;
+    height: 1px;
+    background-color: rgba(100, 100, 100, 0.2);
+    border-radius: 10px;
+    align-self: center;
+}
+
+aside {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins Regular';
+    width: 20%;
+    height: 60%;}
+
+aside .container {
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.2);
+    min-width: 230px;
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    font-family: 'Segoe UI';
+    border-radius: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 100, 100, 0.4) rgba(100, 100, 100, 0.2);
+}
+
+aside.left a {
+    text-decoration: none;
+    color: black;
+}
+
+aside.left a:hover {
+    text-decoration: underline;
+}
+
+aside.left .avaliacao-usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+
+aside.left .avaliacao-usuario .nome-nota {
+    width: 90%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+aside.left .nome {
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+aside.left .avaliacao i {
+    font-size: 13px;
+    padding: 0px;
+}
+
+aside.left .avaliacao-usuario .content {
+    width: 90%;
+}
+
+aside.left .avaliacao-usuario:not(:last-child) {
+    border-bottom: 2px solid rgba(100, 100, 100, 0.5);
+}
+
+aside.left button {
+    font-family: 'Biko Regular';
+    margin-top: 5px;
+    background-color: antiquewhite;
+    height: 30px;
+    width: 100%;
+    line-height: 0px;
+    align-self: flex-end;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    border: rgba(100, 100, 100, 0.2) 2px solid;
+}
+
+aside.left button:hover {
+    background-color: rgba(100, 100, 100, 0.2);
+}
+
+
+aside span.title {
+    padding: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+aside.right span.title {
+    align-self: flex-end;
+    text-align: right;
+}
+
+aside.right .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside.right .container>.textplace {
+    width: 90%;
+    height: 95%;
+}
+
+.profile {
+    position: relative;
+    width: 60%;
+    min-height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.profile .img-fix {
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.3);
+    border-radius: 110px;
+    width: 160px;
+    height: 160px;
+    min-width: 160px;
+    min-height: 160px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .img-fix i {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 5px;
+    align-self: center;
+    text-align: center;
+    font-size: 100px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(100, 100, 100, 0.1);
+}
+
+.profile .img-fix:hover i {
+    display: inline;
+}
+
+.profile .img-fix:hover {
+    cursor: pointer;
+}
+
+#apelido {
+    height: 25%;
+    background-clip: text;
+    text-align: center;
+    min-width: fit-content;
+    white-space: nowrap;
+    font-family: 'Poppins Bold';
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.profile .avaliacao {
+    height: 10%;
+    color: #1E90FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .top {
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.2);
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 20px;
+    width: 70%;
+    height: 40%;
+    gap: 10px;
+}
+
+.profile .top > label, .profile .top > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px dashed rgba(100, 100, 100, 0.2);
+}
+
+.profile .top .bi-pen {
+    display: none;
+}
+
+.profile .top > label:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.no-hover:hover {
+    cursor: default;
+}
+
+.profile .top > label:hover i {
+    display: inline;
+}
+
+.profile .top .description {
+    color: rgba(100, 100, 100, 0.6);
+    pointer-events: none;
+    text-decoration: none;
+}
+
+.profile .top .description:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.profile .top .value, .profile > input {
+    font-family: 'Poppins Regular';
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    text-align: right;
+}
+
+.profile .top select option {
+    font-family: 'Poppins Regular';
+}
+
+.profile .top .value:hover, .profile > input:hover {
+    cursor: pointer;
+}
+
+.profile .top .value:focus, .profile > input:focus {
+    outline: none;
+    cursor: text;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile .top .separator {
+    width: 60%;
+    height: 2%;
+    background-color: rgba(100, 100, 100, 0.2);
+    border-radius: 10px;
+}
+
+.profile .top .info {
+    font-size: 13px;
+    line-height: 2;
+    text-align: right;
+    width: 100%;
+    height: 5%;
+}
+
+.profile .top .info-node {
+    padding: 10px;
+}
+
+.profile .top .parceria {
+    pointer-events: none;
+}
+
+.profile button {
+    background-color: antiquewhite;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    border: rgba(100, 100, 100, 0.6) 2px solid;
+}
+
+.profile button:hover {
+    background-color: rgba(100, 100, 100, 0.2);
+}
+
+.bio {
+    width: 20%;
+    height: 60%;
+    background-color: antiquewhite;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+
+.textarea {
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+    border: none;
+    font-family: 'Poppins Regular';
+    font-size: 15px;
+    text-align: justify;
+    resize: none;
+    outline: none;
+    overflow-x: hidden;
+}

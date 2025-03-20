@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Biko Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Biko Regular'), url('../src/fonts/biko/Biko_Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Biko Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Biko Bold'), url('../src/fonts/biko/Biko_Bold.otf') format('opentype');
+}
+
+main {
+    overflow-y: auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#search {
+    display: flex;
+    gap: 5px;
+    position: fixed;
+    top: 94px;
+    left: 24px;
+}
+
+#search-bar {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.3);
+    border: 2px solid #ccc;
+}
+
+#search div {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+}
+
+#search button,
+#search a {
+    gap: 5px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.3);
+    &:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+#search .search-span {
+    display: none;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* 4 colunas de tamanho igual */
+    gap: 50px;
+    max-width: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content>div>.atracao-container {
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 220px;
+    height: 220px;
+    text-align: center;
+    background-color: rgba(187, 187, 187, 0.362);
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+.atracao-container>div {
+    pointer-events: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: height 0.3s ease;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.atracao-container>div>img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 220px;
+    min-height: 220px;
+    width: 100%;
+    /* Faz a imagem preencher a largura do container */
+    height: 100%;
+    /* Faz a imagem preencher a altura do container */
+    object-fit: cover;
+    /* Garante que a proporção seja mantida */
+    transition: transform 0.1s ease;
+}
+
+.atracao-container>span {
+    pointer-events: none;
+    z-index: 0;
+    font-size: 20px;
+    padding-bottom: 15px;
+    font-family: 'Biko Regular';
+    color: black;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+}
+
+.atracao-container:hover>div {
+    height: 150px;
+}
+
+.atracao-container:hover>div>img {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+#search.big-search {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    flex-direction: column;
+    gap: 20px;
+
+    #search-bar {
+        font-size: 30px;
+        margin-left: 20px;
+        width: 60%;
+        height: 64px;
+        bottom: 10%;
+        top: auto;
+        left: 15%;
+        border-radius: 32px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    div {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+    }
+
+    button {
+        background-color: #f0f0f0;
+        font-size: 20px;
+        width: 256px;
+        height: 64px;
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: #e0e0e0;
+        }
+    }
+}
+
+.not-found {
+    top: 35%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 65%;
+    font-family: 'Biko Regular';
+    color: rgba(0, 0, 0, 0.705);
+    display: none;
+
+    .ops {
+        font-family: 'Biko Bold';
+        font-size: 200px;
+        text-align: center;
+    }
+
+
+    div {
+        gap: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 70%;
+        width: 100%;
+    }
+
+    span {
+        display: block;
+        font-size: 55px;
+        text-align: center;
+    }
+}

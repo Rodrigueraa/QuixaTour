@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../src/nav/add_navbar.js"></script>
+    <link rel="stylesheet" href="../src/css/basic-page.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Quixada Tour - Home</title>
+</head>
+
+<body>
+    <!-- Nav -->
+    <header id="navbar"></header>
+
+    
+    <main>
+        <div class="not-found">
+            <div>
+                <span class="ops">Ops!</span>
+                <span>Parece que sua pesquisa não retornou resultados. Que tal tentar de novo com novos termos?</span>
+            </div>
+        </div>
+        <form id="search">
+            <input type="text" id="search-bar" placeholder="Pesquisar">
+            <div>
+                <button id="search-button"><i class="bi bi-search"></i><span class="search-span"style>Pesquisar</span></button>
+                <button id="reset" onclick="location.href='./index.html'" type="button"><i class="bi bi-trash"></i><span class="search-span">Restaurar</span></button>
+            </div>
+        </form>
+        <div class="content" id="content">
+    </main>
+        
+        <!-- Loading Screen -->
+    <div id="loader-container"></div>
+    <script src="../src/js/loading.js"></script>
+    <script src="script.js"></script>
+    <script src="../src/js/particles.js"></script>
+</body>
+
+</html>

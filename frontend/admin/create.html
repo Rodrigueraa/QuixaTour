@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="create.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/browser-image-compression/1.0.17/browser-image-compression.js"></script>
+    <script src="../src/js/authorized.js"></script>
+    <script src="../src/js/review.js"></script>
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html" id="dashboard">Dashboard</a></li>
+                <li><a href="./list.html?type=users" id="users">Users</a></li>
+                <li><a href="./list.html?type=atracaos" id="attractions">Attractions</a></li>
+                <li><a href="./list.html?type=avaliacaos" id="avaliacoes">Avaliações</a></li>
+                <li><a href="./list.html?type=logout" id="logout" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> 
+        <form id="form">
+            <h4>Criar Atração</h4>
+            <input type="text" name="name" id="name" placeholder="Nome">
+            <input type="text" name="description" id="description" placeholder="Descrição">
+            <input type="text" name="address" id="address" placeholder="Endereço">
+            <input type="text" name="horario" id="horario" placeholder="Horário">
+            <input type="file" id="foto" accept="image/*">
+            <button id="submit">Criar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Admin Panel. All rights reserved.</p>
+    </footer>
+    <div id="loader-container"></div>
+    <script src="../src/js/loading.js"></script> 
+    <script src="create.js"></script>
+</body>
+</html>
+

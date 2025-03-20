@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <script src="../src/js/authorized.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#users">Users</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+                <li><a href="#logout" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Welcome to the admin dashboard.</p>
+        </section>
+        <section id="users">
+            <h2>Users</h2>
+            <p>Manage your users here.</p>
+        </section>
+        <section id="atracaos">
+            <h2>Attractions</h2>
+            <p>Manage your attractions here.</p>
+        </section>
+        <section id="avaliacoes">
+            <h2>Avaliações</h2>
+            <p>Veja todas as avaliações aqui</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Admin Panel. All rights reserved.</p>
+    </footer>
+    
+    <div id="loader-container"></div>
+    <script src="../src/js/loading.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

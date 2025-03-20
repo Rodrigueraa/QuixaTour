@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/basic-page.css">
+    <script src="../src/nav/add_navbar.js"></script>
+    <script src="../src/js/authorized.js"></script>
+    <script src="../src/js/agendar.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style> body { visibility: hidden; } body.loaded { visibility: visible; } </style>
+    <title>Quixada Tour - Atração</title>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <header id="navbar"></header>
+    
+
+    <main>
+        <aside class="secao_guias" id="view-guias">
+            <article id="guias"><h4>Veja os guias disponíveis:</h4></article>
+            <span><section>GUIAS</section></span>
+        </aside>
+        <div class="content">
+            <section class="local">
+                <img src="" alt="imagem_da_atracao" class="imagem" id="imagem">
+                <div class="info_local">
+                    <div class="bio_local"> 
+                        <h1 id="nome" class="nome"></h1>
+                    </div>
+                    <div class="detalhes">
+                        <p id="descricao_detalhes"></p>
+                    </div>    
+                </div>
+            </section>
+            <div id="detalhes" class="infos_local">
+            </div>
+            <section class="avaliacoes" id="avaliacoes">
+                <button id="avaliar">Avaliar</button>
+                <article id="avaliacao_usuario"></article>
+            </section>
+        </div>
+        <aside class="secao_guias" id="agendar-guias">
+            <span><section>AGENDAR</section></span>
+            <div class="botoes">
+            <article id="guias"><h4>Faça seu agendamento:</h4></article>
+                <button id="inserir-agendamento">AGENDAR</button>
+                <button id="remover-agendamento">REMOVER AGENDAMENTO</button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="../src/js/review.js"></script>
+    <div id="loader-container"></div>
+    <script src="../src/js/loading.js"></script>
+    <div id="popup-container"></div>
+    <script src="../src/popup/add_popup.js"></script>
+    <script src="script.js"></script>
+    <script src="../src/js/particles.js"></script>
+</body>
+</html>
